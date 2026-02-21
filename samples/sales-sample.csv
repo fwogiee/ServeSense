@@ -1,0 +1,11 @@
+date,menuItemName,qtySold,revenue,channel
+2026-02-10,Classic Burger,42,504.00,Dine In
+2026-02-10,Caesar Salad,19,247.00,Online
+2026-02-11,Classic Burger,38,456.00,Dine In
+2026-02-11,Fries Basket,52,312.00,Delivery
+2026-02-12,Classic Burger,47,564.00,Online
+2026-02-12,Chicken Wrap,26,338.00,Dine In
+2026-02-13,Caesar Salad,21,273.00,Online
+2026-02-13,Fries Basket,55,330.00,Dine In
+2026-02-14,Chicken Wrap,24,312.00,Delivery
+2026-02-14,Classic Burger,44,528.00,Dine In

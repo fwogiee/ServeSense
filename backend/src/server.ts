@@ -1,16 +1,15 @@
 import app from "./app";
 import { connectDatabase } from "./config/db";
-import { env } from "./config/env";
+
+const PORT = process.env.PORT || 4000;
 
 const start = async (): Promise<void> => {
   try {
     await connectDatabase();
-    app.listen(env.PORT, () => {
-      // eslint-disable-next-line no-console
-      console.log(`ServeSense API running on http://localhost:${env.PORT}`);
+    app.listen(PORT, () => {
+      console.log(`ServeSense API running on port ${PORT}`);
     });
   } catch (error) {
-    // eslint-disable-next-line no-console
     console.error("Failed to start server:", error);
     process.exit(1);
   }

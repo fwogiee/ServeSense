@@ -3,11 +3,16 @@
   "private": true,
   "version": "1.0.0",
   "scripts": {
-    "dev:backend": "npm --prefix backend run dev",
-    "dev:frontend": "npm --prefix frontend run dev",
+    "dev": "concurrently -k -n CLIENT,SERVER \"npm run dev:client\" \"npm run dev:server\"",
+    "dev:client": "npm --prefix frontend run dev",
+    "dev:server": "npm --prefix backend run dev",
+    "install:all": "npm --prefix backend install && npm --prefix frontend install",
     "build": "npm --prefix backend run build && npm --prefix frontend run build"
   },
   "dependencies": {
     "mongodb": "^7.1.0"
+  },
+  "devDependencies": {
+    "concurrently": "^9.2.1"
   }
 }
